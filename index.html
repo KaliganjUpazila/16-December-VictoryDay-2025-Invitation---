@@ -8,15 +8,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
 
 <style>
-/* BODY STYLING */
+/* BODY STYLING: Bangladesh Flag Theme */
 body {
     font-family: 'Baloo 2', Arial, sans-serif;
-    background: linear-gradient(135deg, #ffd6d6, #ffe5b4);
+    background: linear-gradient(to bottom, #006a4e, #f42a41); /* green top, red bottom */
     display: flex;
     justify-content: center;
-    align-items: center;
+    padding: 40px 20px;
     min-height: 100vh;
-    padding: 20px;
+    box-sizing: border-box;
 }
 
 /* INPUT BOX */
@@ -24,11 +24,11 @@ body {
     background: white;
     padding: 30px;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
     text-align: center;
     max-width: 500px;
     width: 100%;
-    animation: fadeIn 1s ease;
+    margin-bottom: 30px;
 }
 
 .input-box input {
@@ -37,21 +37,23 @@ body {
     font-size: 16px;
     border-radius: 5px;
     border: 1px solid #ccc;
+    margin-top: 10px;
 }
 
 .input-box button {
     margin-top: 15px;
     padding: 12px 25px;
     font-size: 16px;
-    background: #00703c;
+    background: #f42a41; /* red button */
     color: white;
     border: none;
     border-radius: 8px;
     cursor: pointer;
     transition: 0.3s;
+    font-weight: bold;
 }
 .input-box button:hover {
-    background: #00532d;
+    background: #d11f31;
 }
 
 /* CARD STYLING */
@@ -64,14 +66,13 @@ body {
     border-radius: 25px;
     padding: 40px 30px;
     box-shadow: 0 20px 40px rgba(0,0,0,0.25);
-    margin-top: 30px;
     animation: fadeIn 1s ease;
     overflow: hidden;
 }
 
 /* Logo Styling */
 .card img {
-    width: 100px;
+    width: 100px; 
     height: auto;
     position: absolute;
     top: 20px;
@@ -125,7 +126,6 @@ body {
     0% { opacity: 0; transform: translateY(-20px); }
     100% { opacity: 1; transform: translateY(0); }
 }
-
 @keyframes titleAnimation {
     0% { transform: scale(1); }
     100% { transform: scale(1.05); }
@@ -153,7 +153,7 @@ body {
 
 <!-- INVITATION CARD -->
 <div class="card" id="card">
-    <img src="https://www.pngall.com/wp-content/uploads/2016/05/Government-Logo-PNG-Clipart.png" alt="বাংলাদেশ সরকার সীল">
+    <img src="logo.png" alt="বাংলাদেশ সরকার সীল">
 
     <h2>১৬ই ডিসেম্বর — বিজয় দিবস ২০২৫</h2>
     <p>প্রিয় <span class="name" id="showName"></span>,</p>
@@ -169,7 +169,6 @@ body {
     </div>
 </div>
 
-<!-- JAVASCRIPT -->
 <script>
 function generateCard(){
     let name = document.getElementById("username").value.trim();
@@ -184,7 +183,6 @@ function showCard(name){
     document.getElementById("showName").innerText = name;
     document.getElementById("card").style.display = "block";
 
-    // Share buttons
     document.getElementById("wa").href = "https://wa.me/?text=" + encodeURIComponent("আপনাকে আমন্ত্রণ জানানো হল! লিঙ্ক: " + window.location.href);
     document.getElementById("fb").href = "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(window.location.href);
 }
