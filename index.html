@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<title>বিজয় দিবস ২০২৫ আমন্ত্রণপত্র</title>
+
+<!-- Google Font for nicer Bengali text -->
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
+
+<style>
+/* BODY STYLING */
+body {
+    font-family: 'Baloo 2', Arial, sans-serif;
+    background: linear-gradient(135deg, #ffd6d6, #ffe5b4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* INPUT BOX */
+.input-box {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    animation: fadeIn 1s ease;
+}
+
+.input-box input {
+    width: 80%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.input-box button {
+    margin-top: 15px;
+    padding: 12px 25px;
+    font-size: 16px;
+    background: #00703c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.input-box button:hover {
+    background: #00532d;
+}
+
+/* CARD STYLING */
+.card {
+    display: none;
+    position: relative;
+    background: linear-gradient(145deg, #ffffff, #fdf6e3);
+    max-width: 700px;
+    width: 100%;
+    border-radius: 25px;
+    padding: 40px 30px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+    margin-top: 30px;
+    animation: fadeIn 1s ease;
+    overflow: hidden;
+}
+
+/* Logo Styling */
+.card img {
+    width: 100px;
+    height: auto;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+/* CARD TITLE */
+.card h2 {
+    text-align: center;
+    color: #00703c;
+    font-size: 28px;
+    margin-bottom: 20px;
+    animation: titleAnimation 1.5s ease-in-out infinite alternate;
+}
+
+/* Name Styling */
+.name {
+    color: #d62828;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+/* Paragraphs */
+.card p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* Share Buttons */
+.share {
+    text-align: center;
+    margin-top: 25px;
+}
+.share a {
+    display: inline-block;
+    margin: 5px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.whatsapp { background: #25D366; }
+.facebook { background: #1877f2; }
+.copy { background: #555; }
+.share a:hover { opacity: 0.85; }
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes titleAnimation {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.05); }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .card, .input-box { width: 90%; padding: 20px; }
+    .card img { width: 80px; }
+    .card h2 { font-size: 24px; }
+    .card p { font-size: 16px; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- INPUT BOX -->
+<div class="input-box">
+    <h2>আপনার নাম লিখুন</h2>
+    <input type="text" id="username" placeholder="আপনার নাম লিখুন">
+    <br>
+    <button onclick="generateCard()">আমন্ত্রণ দেখান</button>
+</div>
+
+<!-- INVITATION CARD -->
+<div class="card" id="card">
+    <img src="https://www.pngall.com/wp-content/uploads/2016/05/Government-Logo-PNG-Clipart.png" alt="বাংলাদেশ সরকার সীল">
+
+    <h2>১৬ই ডিসেম্বর — বিজয় দিবস ২০২৫</h2>
+    <p>প্রিয় <span class="name" id="showName"></span>,</p>
+    <p>১৬ই ডিসেম্বর বাংলাদেশের বিজয় দিবস—বাঙালির অহংকারের দিন। স্বাধীনতা অর্জনের মহান চেতনা, বীর শহীদদের আত্মত্যাগের প্রতি শ্রদ্ধা নিবেদন এবং মুক্তিযুদ্ধের ইতিহাস নতুন প্রজন্মের মাঝে ছড়িয়ে দেওয়ার উদ্দেশ্যে মহান বিজয় দিবস ২০২৫ যথাযোগ্য মর্যাদা ও উৎসবমুখর পরিবেশে উদযাপনের লক্ষ্যে উপজেলা প্রশাসন, কালীগঞ্জ, গাজীপুর কর্তৃক নানাবিধ কর্মসূচি গ্রহণ করা হয়েছে।</p>
+    <p>মহান বিজয় দিবস উপলক্ষে আয়োজিত সকল অনুষ্ঠানে আপনার সশরীরে উপস্থিতি আমাদের সম্মানিত করবে।</p>
+    <p><strong>এ.টি.এম কামরুল ইসলাম</strong><br>উপজেলা নির্বাহী অফিসার<br>কালীগঞ্জ, গাজীপুর</p>
+
+    <div class="share">
+        <h3>আমন্ত্রণ শেয়ার করুন</h3>
+        <a class="whatsapp" id="wa" target="_blank">WhatsApp</a>
+        <a class="facebook" id="fb" target="_blank">Facebook</a>
+        <a class="copy" onclick="copyLink()">লিঙ্ক কপি করুন</a>
+    </div>
+</div>
+
+<!-- JAVASCRIPT -->
+<script>
+function generateCard(){
+    let name = document.getElementById("username").value.trim();
+    if(name==""){ alert("অনুগ্রহ করে নাম লিখুন"); return; }
+
+    let url = window.location.origin + window.location.pathname + "?name=" + encodeURIComponent(name);
+    window.history.pushState({}, '', url);
+    showCard(name);
+}
+
+function showCard(name){
+    document.getElementById("showName").innerText = name;
+    document.getElementById("card").style.display = "block";
+
+    // Share buttons
+    document.getElementById("wa").href = "https://wa.me/?text=" + encodeURIComponent("আপনাকে আমন্ত্রণ জানানো হল! লিঙ্ক: " + window.location.href);
+    document.getElementById("fb").href = "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(window.location.href);
+}
+
+function copyLink(){
+    navigator.clipboard.writeText(window.location.href);
+    alert("লিঙ্ক কপি করা হয়েছে!");
+}
+
+// Auto-load if name exists in URL
+let params = new URLSearchParams(window.location.search);
+if(params.get("name")) showCard(params.get("name"));
+</script>
+
+</body>
+</html>
